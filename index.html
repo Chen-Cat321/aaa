@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>期末</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 導覽列 -->
+<nav class="navbar"> 
+  <div class="logo">QUACK</div>
+  <div class="menu-toggle" id="menuToggle">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">ABOUT</a></li>
+    <li class="dropdown">
+      <a href="#portfolio" class="dropbtn">GROUP</a>
+      <ul class="dropdown-content">
+        <li><a href="#illustration">呱</a></li>
+        <li><a href="#animation">嘎</a></li>
+        <li><a href="#other">噗</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<main>
+  
+  <!-- 輪播區塊 -->
+  <section id="picture" class="page full-screen-section scroll-section">
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg" alt="img1">
+        <img src="https://cdn.britannica.com/39/226539-050-D21D7721/Portrait-of-a-cat-with-whiskers-visible.jpg" alt="img2">
+        <img src="https://i.cbc.ca/1.7046192.1701492097!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/african-wild-cat.jpg?im=Resize%3D780" alt="img3">
+      </div>
+      <button class="carousel-btn prev">&lt;</button>
+      <button class="carousel-btn next">&gt;</button>
+    </div>
+  </section>
+
+  <!-- 關於我 -->
+  <section id="about" class="about-section full-screen-section scroll-section">
+    <div class="about-text">
+      
+      <!-- 個人大頭照 -->
+  <div class="profile-pic-container">
+    <img class="profile-pic" src="https://raw.githubusercontent.com/Chen-Cat321/my-pt/refs/heads/main/cat-look.png" alt="個人大頭照">
+  </div>
+      
+      <h3>關於呱</h3>
+      <p>呱呱<br>呱!呱呱!<br><br><br><br><br></p>
+      <h3>Fav Song</h3>
+
+      <!-- YouTube 影片 -->
+      <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ejhcSi4W568"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集 -->
+  <section id="portfolio" class="portfolio-section full-screen-section scroll-section">
+    <h2>作品集</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" id="illustration">
+        <img src="https://raw.githubusercontent.com/Chen-Cat321/my-pt/refs/heads/main/Logo.jpg" alt="illustration">
+        <h3>呱呱</h3>
+        <p>呱。呱呱呱呱呱。</p>
+      </div>
+      <div class="portfolio-item" id="animation">
+        <img src="https://raw.githubusercontent.com/Chen-Cat321/my-pt/refs/heads/main/yo.jpg" alt="animation">
+        <h3>嘎嘎</h3>
+        <p>嘎嘎!嘎嘎嘎!嘎嘎!</p>
+      </div>
+      <div class="portfolio-item" id="other">
+        <img src="https://raw.githubusercontent.com/Chen-Cat321/my-pt/refs/heads/main/%E8%B2%93%E8%B2%93%E8%AE%9A.jpeg" alt="other">
+        <h3>噗噗</h3>
+        <p>噗噗噗...噗噗!噗噗噗噗。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡我 -->
+  <section id="contact" class="contact-section full-screen-section scroll-section">
+    <h2>聯絡呱</h2>
+    <p>如果你也想呱呱，歡迎聯絡。</p>
+    <div class="contact-info">
+      <p><strong>姓名：</strong> 呱嘎噗</p>
+      <p><strong>電話：</strong> 09xx-xxx-xxx</p>
+      <p><strong>信箱：</strong> example123@gmail.com</p>
+    </div>
+  </section>
+</main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

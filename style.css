@@ -1,0 +1,326 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* 導覽列 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #666;
+  border-radius: 5px;
+}
+
+/* 下拉選單 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #666;
+  padding: 10px;
+  list-style: none;
+  top: 40px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  margin: 5px 0;
+}
+
+.dropdown-content a {
+  color: white;
+}
+
+/* 主內容推下去 */
+main {
+  margin-top: 70px;
+}
+
+/* 輪播 */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  min-width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+/* 輪播按鈕 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* 個人介紹 */
+.about-section {
+  padding: 80px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* 作品集 */
+.portfolio-section {
+  padding: 110px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.portfolio-item {
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* 聯絡我 */
+.contact-section {
+  padding: 110px 40px;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #357ab8;
+}
+
+/* 響應式 */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.contact-info {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info strong {
+  color: #333;
+}
+
+.contact-info a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+/* 讓輪播滿版 */
+.carousel-fullscreen {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-container {
+  height: 100%;
+}
+
+.carousel-slide {
+  height: 100%;
+}
+
+.carousel-slide img {
+  min-width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* 輪播按鈕滑鼠滑過時隱藏 */
+.carousel-btn {
+  transition: opacity 0.3s;
+}
+
+.carousel-btn:hover {
+  opacity: 0;
+}
+/* 圓形大頭照 */
+.profile-pic-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 嵌入影片 */
+.youtube-video {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
